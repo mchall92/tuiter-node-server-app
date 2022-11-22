@@ -14,7 +14,6 @@ mongoose.connect(CONNECTION_STRING);
 app.use(express.json());
 app.use(
     cors({
-        credentials: true,
         methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
         allowedHeaders: ['Content-Type', 'Authorization'],
         origin: '*',
