@@ -12,7 +12,9 @@ const CONNECTION_STRING = process.env.DB_CONNECTION_STRING
 mongoose.connect(CONNECTION_STRING);
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: ["*"]
+}));
 
 HelloController(app)
 UserController(app)
