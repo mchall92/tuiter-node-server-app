@@ -15,9 +15,7 @@ app.use(express.json());
 app.use(
     cors({
         credentials: true,
-        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
-        allowedHeaders: ['Content-Type', 'Authorization'],
-        origin: '*',
+        origin: ['*', 'https://a9--merry-bonbon-24309e.netlify.app/'],
     })
 );
 
