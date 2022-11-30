@@ -12,12 +12,7 @@ const CONNECTION_STRING = process.env.DB_CONNECTION_STRING
 mongoose.connect(CONNECTION_STRING);
 
 app.use(express.json());
-app.use(
-    cors({
-        credentials: true,
-        origin: ['*', 'https://a9--merry-bonbon-24309e.netlify.app/'],
-    })
-);
+app.use(cors());
 
 HelloController(app)
 UserController(app)
