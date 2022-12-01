@@ -12,7 +12,7 @@ const CONNECTION_STRING = process.env.DB_CONNECTION_STRING
 mongoose.connect(CONNECTION_STRING);
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({ credentials: true, origin: true }))
 
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
